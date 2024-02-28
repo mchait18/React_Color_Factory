@@ -25,7 +25,6 @@ function App() {
   return (
     <div>
       <BrowserRouter>
-        {/* <NavBar /> */}
         <Switch>
           <Route exact path="/colors"> <AllColors colorList={colorList} setColorList={setColorList} /> </Route>
           <Route exact path="/colors/new"><NewColor /></Route>

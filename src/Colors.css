@@ -11,14 +11,18 @@ li{
 }
 
 .grad1 {
-    height: 200px;
+    height: 900px;
     background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet, red);
   }
 
-  form{
-    display: inline;
+  .colorForm{
+    display: flex;
+    align-items: center;
+    height: 100px;
     background-color: white;
   }
+
+ 
   button{
     background-color: black;
     color: white;

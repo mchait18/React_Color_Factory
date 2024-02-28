@@ -4,7 +4,7 @@ import "./Colors.css"
 function NewColor({ addColor }) {
     const INITIAL_STATE = {
         name: '',
-        val: ''
+        val: '#000000'
     }
     const [formData, setFormData] = useState(INITIAL_STATE);
     const handleChange = (e) => {
@@ -22,27 +22,29 @@ function NewColor({ addColor }) {
 
     return (
         <div className="grad1">
-            <form onSubmit={handleSubmit}>
-                <label htmlFor="name">Color name: </label>
-                <input
-                    id="name"
-                    type="text"
-                    name="name"
-                    placeholder="Item Name"
-                    value={formData.name}
-                    onChange={handleChange}
-                />
-                <label htmlFor="val">Color value: </label>
-                <input
-                    id="val"
-                    type="color"
-                    name="val"
-                    value={formData.val}
-                    onChange={handleChange}
-                />
-                <button>Add this color</button>
-            </form>
-        </div>
+            <div className="colorForm">
+                <form onSubmit={handleSubmit}>
+                    <label htmlFor="name">Color name: </label>
+                    <input
+                        id="name"
+                        type="text"
+                        name="name"
+                        placeholder="Item Name"
+                        value={formData.name}
+                        onChange={handleChange}
+                    />
+                    <label htmlFor="val">Color value: </label>
+                    <input
+                        id="val"
+                        type="color"
+                        name="val"
+                        value={formData.val}
+                        onChange={handleChange}
+                    />
+                    <button>Add this color</button>
+                </form >
+            </div>
+        </div >
     )
 }
 
