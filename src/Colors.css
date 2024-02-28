@@ -1,0 +1,35 @@
+.topDiv{
+    background-color: black;
+    color: white;
+    height: 8em;
+}
+div{
+    text-align: center;
+}
+li{
+    list-style-type: none;
+}
+
+.grad1 {
+    height: 200px;
+    background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet, red);
+  }
+
+  form{
+    display: inline;
+    background-color: white;
+  }
+  button{
+    background-color: black;
+    color: white;
+    border: 0px;
+    text-decoration: underline;
+  }
+  .colorPage{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color: white;
+    height:300px;
+    width:100%;
+  }
