@@ -3,8 +3,7 @@ import { Link } from "react-router-dom";
 import "./Colors.css"
 import NewColor from "./NewColor";
 
-function AllColors({ colors }) {
-    const [colorList, setColorList] = useState(colors);
+function AllColors({ colorList, setColorList }) {
     const [showAddForm, setShowAddForm] = useState(false);
     const addColor = (newColor) => {
         setColorList(colorList => [{ ...newColor }, ...colorList])
@@ -36,27 +35,5 @@ function AllColors({ colors }) {
         </div>
     );
 }
-
-AllColors.defaultProps = {
-    colors: [
-        {
-            name: "red",
-            val: "	#FF0000"
-        },
-        {
-            name: "green",
-            val: "#00FF00"
-        },
-        {
-            name: "blue",
-            val: "#0000FF"
-        }
-    ]
-}
-
-{/* <Link to={{
-                    pathname: "/colors/new",
-                    // state: { addColor: addColor }
-                }} style={{ color: "white" }}><h2 >Add a color</h2></Link>*/}
 
 export default AllColors
