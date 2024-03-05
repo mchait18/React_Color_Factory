@@ -22,14 +22,14 @@ function App() {
   ]
 
   const [colorList, setColorList] = useState(INITIAL_STATE);
+  const colorNames = colorList.map(color => color.name)
   return (
     <div>
       <BrowserRouter>
         <Switch>
           <Route exact path="/colors"> <AllColors colorList={colorList} setColorList={setColorList} /> </Route>
           <Route exact path="/colors/new"><NewColor /></Route>
-          <Route path="/colors/:color"> <ColorDetail /></Route>
-          {/* <Route path="/colors/*"><Redirect to="/colors" /></Route> */}
+          <Route path="/colors/:color"> <ColorDetail colorNames={colorNames} /></Route>
           <Redirect to="/colors" />
         </Switch>
       </BrowserRouter>
